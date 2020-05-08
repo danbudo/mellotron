@@ -6,11 +6,17 @@
 /* variables */
 
 :root {
-    --DarkGrey: #222;
-    --OriginalYellow: #f7da3e;
-    --ETCol: #ffc420;
-    --CBCol: #4B9DBE;
-    --MagpieCol: #6aad43;
+    --dark: #000;
+    --light: #fff;
+    --fixedWidth: 1140px;
+    --large:3rem;
+    --standard:1rem;
+    --medium:0.9rem;
+    --small:0.8rem;
+    --smallPrint:0.7rem;
+    --fontReg:'ITC Serif Gothic Regular';
+    --fontBold:'ITC Serif Gothic Bold';
+    --gridCol: 25%;
 }
 
 
@@ -99,17 +105,17 @@ main {
 }
 
 body {
-    font-size: 24px;
+    font-size: 18px;
     color: var(--DarkGrey);
     line-height: 1.5rem;
 }
 
 .siteHeader,
 .siteFooter {
-    background-color: white;
-    color: #f1f3f4;
+    background-color: black;
     line-height: 4rem;
     text-transform: uppercase;
+    color: white;
 }
 
 .heroImage {
@@ -203,7 +209,6 @@ nav>a {
 }
 
 .primaryNav a {
-    color: #f1f3f4;
     transition: 0.2s;
 }
 
@@ -248,7 +253,9 @@ nav>a:hover {
 
 .page {
     margin: 0 auto;
-    max-width: 1140px;
+    max-width: var(--fixedWidth);
+    display: flex;
+    flex-direction: row;
 }
 
 .contentHeader {
@@ -287,7 +294,9 @@ nav>a:hover {
 .content,
 .blurb section {}
 
-.content {}
+.content {
+    flex: 1;
+}
 
 .blurb h3 {
     margin-bottom: 1em;
@@ -355,6 +364,7 @@ audio {
 
 .blurb {
     /* margin-right: 4rem; */
+    max-width: var(--gridCol);
 }
 
 
@@ -364,15 +374,15 @@ audio {
     padding: 0;
     text-transform: none;
     line-height: normal;
-    background-color: transparent;
 }
 
 .footerFlexContent {
     display: grid;
-    background-color: var(--DarkGrey);
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 4rem;
     padding: 3rem 0;
+    max-width: var(--fixedWidth);
+    margin: 0 auto;
 }
 
 .siteFooter h3 {

@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <head>
     <title>Mellotron</title>
     <meta charset="utf-8">
@@ -12,39 +11,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="functions.js" language="javascript"></script>
 </head>
-
 <body class="home">
     <main class="mellotronWebsite ">
         <header id="siteHeader" class="tier siteHeader" w3-include-html="siteheader.html"></header>
         <div id="secondaryNav" class="tier secondaryNav" w3-include-html="secondarynav.html"></div>
-        <div class="heroImage"></div>
-        <div class="page">
-            
-            <article class="content">
-                <header class="contentHeader">
-                <h2>Generic Title</h2>
-            </header>
-                <p>About section bla bla</p>
-            </article>
-            <aside class="blurb">
-                <section class="categories">
-                    <h3>categories</h3>
-                    <ul>
-                        <li>One</li>
-                        <li>Two</li>
-                        <li>Three</li>
-                    </ul>
-                </section>
-                <section class="supplementaryInfo">
-                    <h3>About</h3>
-                    <p>dfhdjsgfh dsfbsdf,jhg sdfhg chgdhdjhcg hdsgc ydsg hdgcjhsd gcjhsdg chsdg jhsdgc jsdgcsd</p>
-                    <p>dfhdjsgfh dsfbsdf,jhg sdfhg chgdhdjhcg hdsgc ydsg hdgcjhsd gcjhsdg chsdg jhsdgc jsdgcsd</p>
-                    <p>dfhdjsgfh dsfbsdf,jhg sdfhg chgdhdjhcg hdsgc ydsg hdgcjhsd gcjhsdg chsdg jhsdgc jsdgcsd</p>
-                </section>
-            </aside>
-        </div>
-        <!-- end page content -->
-        <footer class="siteFooter" w3-include-html="sitefooter.html"></footer>
+<article class="page" w3-include-html=".pages/home.html">
+</article>
+<footer class="siteFooter" w3-include-html="sitefooter.html"></footer>
     </main>
     <script>
         w3.includeHTML();

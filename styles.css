@@ -2,6 +2,7 @@
 
 /* CSS Document */
 
+
 /* variables */
 
 :root {
@@ -37,12 +38,12 @@
 /* Proxima Nova Regular */
 @font-face {
     font-family: 'Proxima Nova Regular';
-    src: url('./fonts/ITC_Serif_Gothic_Bold.woff') format('woff');
+    src: url('./fonts/ProximaNovaReg.otf') format('otf');
 }
 /* Proximan Nova Bold */
 @font-face {
     font-family: 'Proxima Nova Bold';
-    src: url('./fonts/ITC_Serif_Gothic_Bold.woff') format('woff');
+    src: url('./fonts/ProximaNovaBold.otf') format('otf');
 }
 /* Basics */
 
@@ -57,7 +58,7 @@ body {
 }
 
 html {
-    font-family: 'ITC Serif Gothic Regular', sans-serif;
+    font-family: 'Proxima Nova Regular';
 }
 
 body {
@@ -84,7 +85,7 @@ h2,
 h3,
 nav>a {
     margin: 0;
-    font-family: 'ITC Serif Gothic Bold', sans-serif;
+    font-family: var(--fontBold);
     letter-spacing: 0;
 }
 
@@ -123,8 +124,7 @@ body {
 }
 
 .heroImage {
-    background-color: rgba(0, 0, 0, 0.1);
-    min-height: 16em;
+    /* min-height: 16em; */
 }
 
 
@@ -205,12 +205,15 @@ nav {
 nav>a {
     font-size: 1em;
     font-weight: 600;
+   
 }
 
 nav>a {
     position: relative;
 }
-
+.siteHeader h3 {
+     font-family: 'ITC Serif Gothic Bold';
+}
 .primaryNav a {
     transition: 0.2s;
 }
@@ -260,8 +263,25 @@ nav>a:hover {
     flex-direction: row;
     flex: 1;
     margin: 0 auto;
+    width: 100%;
+    padding: 2rem  1rem;
 }
-
+.mainContent {
+    flex: 1;
+}
+.heroImage {
+    }
+    .home .heroImage {
+        background-image: url('img/melloLogo_white.png');
+        min-height: 50vh;
+        background-color: white;
+        background-position: 50%;
+    }
+.secondaryContent {
+    width: var(--gridCol);
+    border-left: 1px solid #333;
+    padding-left: 2rem;
+}
 .contentHeader {
     padding: 0;
     margin: 0;
@@ -289,9 +309,9 @@ nav>a:hover {
 
 .contentHeader h2 {
     font-weight: 700;
-    /* text-transform: uppercase; */
     font-size: 3rem;
     line-height: 1em;
+    margin-top: 0.2rem;
 }
 
 .content,
@@ -300,14 +320,7 @@ nav>a:hover {
 .content {
     flex: 1;
 }
-.mainContent {
-    padding-top: 2rem;
-    flex: 1;
-}
-.secondaryContent {
-    width: var(--gridCol);
-    padding-top: 2rem;
-}
+
 .blurb h3 {
     margin-bottom: 1em;
 }
@@ -330,24 +343,18 @@ nav>a:hover {
 }
 .productBanner {
     display: flex;
+    flex-wrap: wrap;
+    color: white;
+    /* padding: 0 0.5rem; */
 }
-
 .productBanner>a {
     flex: 1;
     background-color: #333;
-    margin: 0.25rem;
+    height: 13rem;
+    /* margin: 1rem 0.5rem 0; */
+    min-width: 15rem;
+    padding: 1rem;
 }
-
-.audioPlayer {
-    flex: 1;
-}
-
-
-
-audio {
-    width: 100%;
-}
-
 .blurb {
     /* margin-right: 4rem; */
     max-width: var(--gridCol);
@@ -360,6 +367,7 @@ audio {
     padding: 0;
     text-transform: none;
     line-height: normal;
+    padding: 0 1rem;
 }
 
 .footerFlexContent {
@@ -368,8 +376,6 @@ audio {
     grid-column-gap: 4rem;
     padding: 3rem 0;
     max-width: var(--fixedWidth);
-    margin: 0 auto;
-    width: var(--fixedWidth);
     margin: 0 auto;
 }
 
@@ -410,7 +416,7 @@ address a:hover {
     color: #999;
     background-color: rgb(34, 34, 34);
     border-top: 1px solid #333;
-    width: var(--fixedWidth);
+    max-width: var(--fixedWidth);
     margin: 0 auto;
 }
 
@@ -476,15 +482,15 @@ main {
 .siteHeader .tier {
     display: flex;
     justify-content: space-between;
-    width: var(--fixedWidth);
+    max-width: var(--fixedWidth);
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 
 /* Hero Images by page */
 
 .heroImage {
-    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -653,16 +659,7 @@ main {
         padding: 0;
         margin: 0;
     }
-    .heroImage {
-        background-size: cover;
-    }
-    .home .heroImage {
-        background-image: url('img/melloLogo_white.png');
-        background-size: 80%;
-        height: 500px;
-        background-color: white;
-        background-position: 50%;
-    }
+    
     .contentHeader {
         margin: 0;
         padding: 3.5rem 2rem 1.75rem;
@@ -672,29 +669,7 @@ main {
         text-align: center;
         color: white;
     }
-    .song {
-        border-radius: 0;
-        border-top: 1px solid rgba(34, 34, 34, 0.15);
-        margin: 0;
-    }
-    .song figcaption {
-        display: flex;
-        margin-bottom: 1em;
-        flex-wrap: wrap;
-    }
-    .song figcaption h3,
-    .song figcaption h4 {
-        font-size: 0.85rem;
-        margin: 0;
-        line-height: 1.3em;
-    }
-    .song figcaption h3 {
-        margin-right: 0.3em;
-        margin-bottom: 0.2em;
-    }
-    .productionNotes {
-        display: none;
-    }
+   
     .blurb section:first-child {}
     .blurb {
         padding: 0 2rem;

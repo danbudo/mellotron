@@ -38,12 +38,12 @@
 /* Proxima Nova Regular */
 @font-face {
     font-family: 'Proxima Nova Regular';
-    src: url('./fonts/ITC_Serif_Gothic_Bold.woff') format('woff');
+    src: url('./fonts/ProximaNovaReg.otf') format('woff');
 }
 /* Proximan Nova Bold */
 @font-face {
     font-family: 'Proxima Nova Bold';
-    src: url('./fonts/ITC_Serif_Gothic_Bold.woff') format('woff');
+    src: url('./fonts/ProximaNovaBold.otf') format('woff');
 }
 /* Basics */
 
